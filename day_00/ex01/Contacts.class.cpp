@@ -8,9 +8,9 @@ Contacts::~Contacts(void)
 {
 }
 
-std::string     Contacts::getFirstname(void) const
+void     Contacts::getFirstname(void) const
 {
-    return this->_firstname;
+    
 }
 
 void            Contacts::setFirstname(std::string firstname)

@@ -8,11 +8,11 @@ class Contacts
     public:
         Contacts(void);
         ~Contacts(void);
-        std::string     getFirstname(void) const;
-        void            setFirstname(std::string);
+        void     getFirstname(void) const;
+        void     setFirstname(std::string);
 
     private:
         std::string _firstname;
-}
+};
 
 #endif

@@ -6,7 +6,7 @@
 #    By: vivan-de <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/22 12:53:27 by vivan-de          #+#    #+#              #
-#    Updated: 2017/05/22 12:53:30 by vivan-de         ###   ########.fr        #
+#    Updated: 2017/05/22 16:52:16 by vivan-de         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ NAME = phonebook
 
 CLANG = clang++ -Wall -Werror -Wextra
 
-OBJ = phonebook.o
+OBJ = phonebook.o Contacts.class.o
 
 all: $(NAME)
 
