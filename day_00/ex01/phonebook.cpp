@@ -37,7 +37,7 @@ int main()
         {
             for (int count = 0; count < index; count++)
             {
-                std::cout << contacts[count].getFirstname() << std::endl;
+                contacts[count].getFirstname();
             }
         }
         else if (!command.compare("EXIT"))
