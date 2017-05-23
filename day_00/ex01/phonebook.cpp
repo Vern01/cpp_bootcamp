@@ -41,41 +41,41 @@ int     main()
             std::cout << std::endl;
         std::cout   << "\t'EXIT' to leave the phonebook" << std::endl
                     << "> ";
-        getline(std::cin, command);
+        std::getline(std::cin, command);
         if (!command.compare("ADD") && index < 8)
         {
             std::cout << "Firstname: ";
-            getline(std::cin, command);
+            std::getline(std::cin, command);
             contacts[index].setFirstname(command);
             std::cout << "Lastname: ";
-            getline(std::cin, command);
+            std::getline(std::cin, command);
             contacts[index].setLastname(command);
             std::cout << "Nickname: ";
-            getline(std::cin, command);
+            std::getline(std::cin, command);
             contacts[index].setNickname(command);
             std::cout << "Login: ";
-            getline(std::cin, command);
+            std::getline(std::cin, command);
             contacts[index].setLogin(command);
             std::cout << "Postal Address: ";
-            getline(std::cin, command);
+            std::getline(std::cin, command);
             contacts[index].setPostal(command);
             std::cout << "Email: ";
-            getline(std::cin, command);
+            std::getline(std::cin, command);
             contacts[index].setEmail(command);
             std::cout << "Phone Number: ";
-            getline(std::cin, command);
+            std::getline(std::cin, command);
             contacts[index].setPhone(command);
             std::cout << "Birth Day: ";
-            getline(std::cin, command);
+            std::getline(std::cin, command);
             contacts[index].setBirth(command);
             std::cout << "Fav Meal: ";
-            getline(std::cin, command);
+            std::getline(std::cin, command);
             contacts[index].setMeal(command);
             std::cout << "Underwear Color: ";
-            getline(std::cin, command);
+            std::getline(std::cin, command);
             contacts[index].setUnderwear(command);
             std::cout << "Darkest Seceret: ";
-            getline(std::cin, command);
+            std::getline(std::cin, command);
             contacts[index].setSeceret(command);
             index++;
         }
@@ -92,7 +92,7 @@ int     main()
             do
             {
                 std::cout << "Select contact by index: ";
-                getline(std::cin, command);
+                std::getline(std::cin, command);
             } while (test_int(command, index));
             contacts[command[0] - '0' - 1].displayInfo();
         }
