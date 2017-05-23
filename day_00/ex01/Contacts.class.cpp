@@ -59,7 +59,7 @@ std::string            Contacts::prepareLine(std::string line)
         line = line.substr(0, 9) + ".";
     for (int spaces = 0; spaces < line.length() - 10; spaces++)
     {
-        line += " ";
+        line = " " + line;
     }
     return line;
 }
