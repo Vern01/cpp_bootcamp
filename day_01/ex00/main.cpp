@@ -2,10 +2,11 @@
 
 int     main()
 {
-    Pony derp1 = Pony("Stackels");
-    Pony *derp2 = new Pony("Heapels");
+    Pony ponyMaker = Pony("The Pony Maker");
+    Pony ponyStack = ponyMaker.ponyOnTheStack("Stackels");
+    Pony *ponyHeap = ponyMaker.ponyOnTheHeap("Heapels");
 
-    delete derp2;
+    delete ponyHeap;
 
     std::cout << "...A few seconds later.." << std::endl;
 

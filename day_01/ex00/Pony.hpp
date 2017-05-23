@@ -8,6 +8,9 @@ public:
     Pony(std::string);
     ~Pony(void);
 
+    Pony ponyOnTheStack(std::string);
+    Pony * ponyOnTheHeap(std::string);
+
 private:
     std::string _name;
 };
