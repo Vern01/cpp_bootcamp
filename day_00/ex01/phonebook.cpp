@@ -13,26 +13,38 @@
 #include "phonebook.hpp"
 #include <string>
 
+int     test_int(std::string value, int phonebook_size)
+{
+    if (value.length() == 1 && value[0] > 48 && value[0] < 57 && (value[0] - '0') <= phonebook_size)
+        return 0;
+    return 1;
+}
 
-
-int main()
+int     main()
 {
     Contacts    contacts[8];
     int         index;
     std::string command;
     
+    index = 0;
     while (42)
     {    
-        std::cout << "Type:" << std::endl
-                  << "\t'ADD', to add a new contact" << std::endl
-                  << "\t'SEARCH' to get a list of all contacts. You can select a contact by index for more info." << std::endl
-                  << "\t'EXIT' to leave the phonebook" << std::endl
-                  << "> ";
-        std::cin >> command;
-        if (!command.compare("ADD"))
+        std::cout << "Type a command:" << std::endl;
+        if (index < 8)
+            std::cout   << "\t'ADD', to add a new contact" << std::endl;
+        else
+            std::cout << "\t'ADD', -Contacts is full!-" << std::endl;
+        std::cout   << "\t'SEARCH' to get a list of all contacts.";
+        if (index == 0)
+            std::cout << " -Contact list is now empty-" << std::endl;
+        else
+            std::cout << std::endl;
+        std::cout   << "\t'EXIT' to leave the phonebook" << std::endl
+                    << "> ";
+        getline(std::cin, command);
+        if (!command.compare("ADD") && index < 8)
         {
             std::cout << "Firstname: ";
-            std::cin.get();
             getline(std::cin, command);
             contacts[index].setFirstname(command);
             std::cout << "Lastname: ";
@@ -67,11 +79,26 @@ int main()
             contacts[index].setSeceret(command);
             index++;
         }
-        else if (!command.compare("SEARCH"))
+        else if (!command.compare("SEARCH") && index != 0)
         {
-
+            std::cout   << " ___________________________________________ " << std::endl
+                        << "|Index     |Firstname |Lastname  |Nickname  |" << std::endl
+                        << " ___________________________________________ " << std::endl;
+            for (int i = 0; i < index; i++)
+            {
+                contacts[i].printRow(i + 1);
+            }
+            std::cout << " ___________________________________________ " << std::endl;
+            do
+            {
+                std::cout << "Select contact by index: ";
+                getline(std::cin, command);
+            } while (test_int(command, index));
+            contacts[command[0] - '0' - 1].displayInfo();
         }
         else if (!command.compare("EXIT"))
             break;
+        else if (!command.compare("clear"))
+            system("clear");
     }
 }

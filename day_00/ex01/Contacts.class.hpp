@@ -8,18 +8,20 @@ class Contacts
     public:
         Contacts(void);
         ~Contacts(void);
-        void     setFirstname(std::string);
-        void     setLastname(std::string);
-        void     setNickname(std::string);
-        void     setLogin(std::string);
-        void     setPostal(std::string);
-        void     setEmail(std::string);
-        void     setPhone(std::string);
-        void     setBirth(std::string);
-        void     setMeal(std::string);
-        void     setUnderwear(std::string);
-        void     setSeceret(std::string);
-        void     printTable(int index, Contacts *contacts);
+        void        setFirstname(std::string);
+        void        setLastname(std::string);
+        void        setNickname(std::string);
+        void        setLogin(std::string);
+        void        setPostal(std::string);
+        void        setEmail(std::string);
+        void        setPhone(std::string);
+        void        setBirth(std::string);
+        void        setMeal(std::string);
+        void        setUnderwear(std::string);
+        void        setSeceret(std::string);
+        std::string prepareLine(std::string);
+        void        printRow(int index);
+        void        displayInfo(void);
 
     private:
         std::string _firstname;
