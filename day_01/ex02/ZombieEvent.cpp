@@ -7,5 +7,7 @@ void    ZombieEvent::setZombieType(std::string type)
 
 Zombie* ZombieEvent::newZombie(std::string name)
 {
-    return new Zombie(name, _type);
+    Zombie* zombie = new Zombie();
+    zombie->setVars(name, this->_type);
+    return zombie;
 }
