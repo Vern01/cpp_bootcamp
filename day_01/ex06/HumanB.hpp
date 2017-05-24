@@ -1,5 +1,6 @@
 #ifndef CPP_BOOTCAMP_HUMANB_HPP
 #define CPP_BOOTCAMP_HUMANB_HPP
+#include "Weapon.hpp"
 
 class HumanB
 {
@@ -11,7 +12,7 @@ public:
 
 private:
 	std::string		_name;
-	Weapon&			_weapon;
+	Weapon*			_weapon;
 };
 
 #endif
