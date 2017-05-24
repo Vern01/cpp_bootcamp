@@ -3,8 +3,8 @@
 int     main()
 {
     Pony ponyMaker = Pony("The Pony Maker");
-    Pony ponyStack = ponyMaker.ponyOnTheStack("Stackels");
     Pony *ponyHeap = ponyMaker.ponyOnTheHeap("Heapels");
+    Pony ponyStack = ponyMaker.ponyOnTheStack("Stackels");
 
     delete ponyHeap;
 
