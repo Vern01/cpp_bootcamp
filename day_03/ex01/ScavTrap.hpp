@@ -1,0 +1,8 @@
+//
+// Created by Victor verdun VAN DER WATT on 2017/05/26.
+//
+
+#ifndef CPP_BOOTCAMP_SCAVTRAP_HPP
+#define CPP_BOOTCAMP_SCAVTRAP_HPP
+
+#endif //CPP_BOOTCAMP_SCAVTRAP_HPP
