@@ -12,13 +12,12 @@ class Bureaucrat {
         ~Bureaucrat();
 
 	std::string		getName() const;
-	void			setName(const char* name);
 	unsigned int	getGrade() const;
 	void			setGrade(unsigned int grade);
 	void			incrementGrade();
 	void			decrementGrade();
 
-    class GradeToHighException : public std::exception{
+    class GradeTooHighException : public std::exception{
         public:
             virtual const char* what() const throw();
     };
@@ -31,7 +30,7 @@ class Bureaucrat {
 
 
 	private:
-		std::string			_name;
+		const std::string	_name;
 		unsigned int		_grade;
 };
 

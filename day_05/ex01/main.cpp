@@ -5,12 +5,11 @@ int main() {
     try {
 		unsigned int value = 147;
         Bureaucrat b("Bob", value);
-		b.decrementGrade();
+		b.incrementGrade();
 		std::cout << b << std::endl;
 		b.setGrade(148);
-		b.setName("Jan");
 		std::cout << b << std::endl;
-		b.incrementGrade();
+		b.decrementGrade();
 		std::cout << b << std::endl;
 
 		std::cout << b.getName() << std::endl;
@@ -22,9 +21,7 @@ int main() {
 
 		c.setGrade(151);
 
-    } catch (Bureaucrat::GradeToHighException e) {
-        std::cout << e.what() << std::endl;
-    } catch (Bureaucrat::GradeTooLowException e) {
+    } catch (std::exception & e) {
         std::cout << e.what() << std::endl;
     }
 }
