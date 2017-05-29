@@ -7,6 +7,8 @@ int main() {
 	jan.takeDamage(20);
 	FragTrap victor = jan;
 	victor.takeDamage(10);
+
+
 	jan.meleeAttack("himself again");
 	jan.takeDamage(20);
 	jan.beRepaired(100);
@@ -19,5 +21,4 @@ int main() {
 	koos.challengeNewcomer();
 	koos.rangedAttack("Jan");
 	koos.challengeNewcomer();
-
 }

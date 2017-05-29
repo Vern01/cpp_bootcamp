@@ -14,7 +14,6 @@ public:
 
 	Fixed &			operator=(Fixed const & rhs);
 	int				getRawBits(void) const;
-	int				getFixed(void) const;
 	int				toInt(void) const;
 	float			toFloat(void) const;
 

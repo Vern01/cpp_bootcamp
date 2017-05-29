@@ -16,8 +16,9 @@ FragTrap::FragTrap(FragTrap const &src) : _hitPoints(src._hitPoints), _maxHPoint
 
 FragTrap &		FragTrap::operator=(FragTrap const & rhs)
 {
-	FragTrap trap(rhs);
-	*this = trap;
+	this->_hitPoints = rhs._hitPoints;
+	this->_energie = rhs._energie;
+	this->_level = rhs._level;
 	return *this;
 }
 

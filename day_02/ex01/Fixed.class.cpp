@@ -31,10 +31,6 @@ int			Fixed::getRawBits()	const
 	return this->_fixed;
 }
 
-int 		Fixed::getFixed()	const
-{
-	return this->_fixed;
-}
 
 int			Fixed::toInt() const
 {
